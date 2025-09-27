@@ -1,155 +1,38 @@
 [
   {
-    "title": "Atana",
-    "banner": "https://r.res.easebar.com/pic/20241231/0e419220-b66b-427f-b67f-f27243fd6a5b.jpg",
-    "description": "An epic game traller.",
+    "title": "Alien Earth",
+    "banner": "https://cdn.abcotvs.com/dip/images/16667231_060525-otrc-alienearth-img.jpg",
+    "description": "Click Popuot To Get Video info",
     "seasons": [
       {
         "name": "Season 1",
         "episodes": [
           {
             "title": "Episode 1",
-            "iframe": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+            "iframe": "https://drive.google.com/file/d/1tq7kQ3RUHqiAqQkwhEp2g0l_Frc_xDg6/preview"
           },
           {
             "title": "Episode 2",
-            "iframe": "https://drive.google.com/file/d/1eUrFsf_lbtIKQig4W0NS0jxgD_wYig7M/preview"
-          }
-        ]
-      },
-      {
-        "name": "Season 2",
-        "episodes": [
-          {
-            "title": "Episode 1",
-            "iframe": "https://drive.google.com/file/d/1eUrFsf_lbtIKQig4W0NS0jxgD_wYig7M/preview"
+            "iframe": "https://drive.google.com/file/d/1b4Qn_lbXiqfxSQktb2fBkQIRfiHzeWvf/preview"
           },
           {
-            "title": "Episode 2",
-            "iframe": "https://www.youtube.com/embed/oHg5SJYRHA0"
+            "title": "Episode 3",
+            "iframe": "https://drive.google.com/file/d/11CAB4JlKfekhdC-ikfOiQYPrQ_8HaRiw/preview"
+          },
+          {
+            "title": "Episode 4 (Not Ready)",
+            "iframe": "Episode 4 (Not Ready)"
+          },
+          {
+            "title": "Episode 5 (Not Ready)",
+            "iframe": "Episode 5 (Not Ready)"
+          },
+          {
+            "title": "Episode 6",
+            "iframe": "https://drive.google.com/file/d/1S4sQkWiffoNHLraTBFYOcsqdTKVskT8L/preview"
           }
         ]
       }
     ]
-  },
-  {
-    "title": "Batman",
-    "banner": "https://r.res.easebar.com/pic/20241231/0e419220-b66b-427f-b67f-f27243fd6a5b.jpg",
-    "description": "An epic nanj traller.",
-    "seasons": [
-      {
-        "name": "Season 1",
-        "episodes": [
-          {
-            "title": "Episode 1",
-            "iframe": "https://drive.google.com/file/d/1eUrFsf_lbtIKQig4W0NS0jxgD_wYig7M/preview"
-          },
-          {
-            "title": "Episode 2",
-            "iframe": "https://www.youtube.com/embed/oHg5SJYRHA0"
-          }
-        ]
-      },
-      {
-        "name": "Season 2",
-        "episodes": [
-          {
-            "title": "Episode 1",
-            "iframe": "https://drive.google.com/file/d/1eUrFsf_lbtIKQig4W0NS0jxgD_wYig7M/preview"
-          },
-          {
-            "title": "Episode 2",
-            "iframe": "https://www.youtube.com/embed/oHg5SJYRHA0"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "title": "Lonely",
-    "banner": "https://i.ytimg.com/vi/3cJmKMKOKcc/maxresdefault.jpg",
-    "description": "Clck Jumper.",
-    "seasons": [
-      {
-        "name": "Season 1",
-        "episodes": [
-          {
-            "title": "Episode 1",
-            "iframe": "https://drive.google.com/file/d/1FbI2tnus9juN_IA8cjcS8L8gAQyJzPni/preview"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "title": "Vikky",
-    "banner": "https://i.ytimg.com/vi/3cJmKMKOKcc/maxresdefault.jpg",
-    "description": "Clck Jumper.",
-    "seasons": [
-      {
-        "name": "Season 1",
-        "episodes": [
-          {
-            "title": "Episode 1",
-            "iframe": "https://drive.google.com/file/d/1FbI2tnus9juN_IA8cjcS8L8gAQyJzPni/preview"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "title": "New Show",
-    "banner": "",
-    "description": "",
-    "seasons": []
-  },
-  {
-    "title": "New Show",
-    "banner": "",
-    "description": "",
-    "seasons": []
-  },
-  {
-    "title": "New Show",
-    "banner": "",
-    "description": "",
-    "seasons": []
-  },
-  {
-    "title": "New Show",
-    "banner": "",
-    "description": "",
-    "seasons": []
-  },
-  {
-    "title": "New Show",
-    "banner": "",
-    "description": "",
-    "seasons": []
-  },
-  {
-    "title": "New Show",
-    "banner": "",
-    "description": "",
-    "seasons": []
-  },
-  {
-    "title": "New Show",
-    "banner": "",
-    "description": "",
-    "seasons": []
-  },
-  {
-    "title": "New Show",
-    "banner": "",
-    "description": "",
-    "seasons": []
-  },
-  {
-    "title": "New Show",
-    "banner": "",
-    "description": "",
-    "seasons": []
   }
 ]
-
