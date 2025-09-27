@@ -79,6 +79,22 @@
           }
         ]
       }
-    ]
+    ],
+    {
+    "title": "Vikky",
+    "banner": "https://i.ytimg.com/vi/3cJmKMKOKcc/maxresdefault.jpg",
+    "description": "Clck Jumper.",
+    "seasons": [
+      {
+        "name": "Season 1",
+        "episodes": [
+          {
+            "title": "Episode 1",
+            "iframe": "https://drive.google.com/file/d/1FbI2tnus9juN_IA8cjcS8L8gAQyJzPni/preview"
+          }
+        ]
+      }
+    ],
   }
 ]
+
