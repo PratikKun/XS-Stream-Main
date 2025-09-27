@@ -1,0 +1,68 @@
+[
+  {
+    "title": "Atana",
+    "banner": "https://r.res.easebar.com/pic/20241231/0e419220-b66b-427f-b67f-f27243fd6a5b.jpg",
+    "description": "An epic game traller.",
+    "seasons": [
+      {
+        "name": "Season 1",
+        "episodes": [
+          {
+            "title": "Episode 1",
+            "iframe": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+          },
+          {
+            "title": "Episode 2",
+            "iframe": "https://drive.google.com/file/d/1eUrFsf_lbtIKQig4W0NS0jxgD_wYig7M/preview"
+          }
+        ]
+      },
+      {
+        "name": "Season 2",
+        "episodes": [
+          {
+            "title": "Episode 1",
+            "iframe": "https://drive.google.com/file/d/1eUrFsf_lbtIKQig4W0NS0jxgD_wYig7M/preview"
+          },
+          {
+            "title": "Episode 2",
+            "iframe": "https://www.youtube.com/embed/oHg5SJYRHA0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Batman",
+    "banner": "https://r.res.easebar.com/pic/20241231/0e419220-b66b-427f-b67f-f27243fd6a5b.jpg",
+    "description": "An epic nanj traller.",
+    "seasons": [
+      {
+        "name": "Season 1",
+        "episodes": [
+          {
+            "title": "Episode 1",
+            "iframe": "https://drive.google.com/file/d/1eUrFsf_lbtIKQig4W0NS0jxgD_wYig7M/preview"
+          },
+          {
+            "title": "Episode 2",
+            "iframe": "https://www.youtube.com/embed/oHg5SJYRHA0"
+          }
+        ]
+      },
+      {
+        "name": "Season 2",
+        "episodes": [
+          {
+            "title": "Episode 1",
+            "iframe": "https://drive.google.com/file/d/1eUrFsf_lbtIKQig4W0NS0jxgD_wYig7M/preview"
+          },
+          {
+            "title": "Episode 2",
+            "iframe": "https://www.youtube.com/embed/oHg5SJYRHA0"
+          }
+        ]
+      }
+    ]
+  }
+]
