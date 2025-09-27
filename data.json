@@ -79,8 +79,9 @@
           }
         ]
       }
-    ],
-    {
+    ]
+  },
+  {
     "title": "Vikky",
     "banner": "https://i.ytimg.com/vi/3cJmKMKOKcc/maxresdefault.jpg",
     "description": "Clck Jumper.",
@@ -94,7 +95,6 @@
           }
         ]
       }
-    ],
+    ]
   }
 ]
-
