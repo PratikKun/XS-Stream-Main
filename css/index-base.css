@@ -275,7 +275,7 @@ button {
   justify-content: center;
 }
 
-#searchInput {
+.searchInput {
   width: 100%;
   padding: 0.7rem 1rem;
   border: 2px solid #ffffff;
@@ -287,33 +287,7 @@ button {
   color: white;
 }
 
-#searchInput:focus {
-  border-color: #ff000d;
-  color: white;
-  box-shadow: 0 0 8px rgba(74, 144, 226, 0.4);
-  background: #0a0a0a;
-}
-.search-bar {
-  width: 100%;
-  max-width: 500px;
-  margin: 1rem auto;
-  display: flex;
-  justify-content: center;
-}
-
-#searchInput {
-  width: 100%;
-  padding: 0.7rem 1rem;
-  border: 2px solid #ffffff;
-  border-radius: 25px;
-  font-size: 1rem;
-  outline: none;
-  transition: all 0.3s ease;
-  background: #161616;
-  color: white;
-}
-
-#searchInput:focus {
+.searchInput:focus {
   border-color: #ff000d;
   color: white;
   box-shadow: 0 0 8px rgba(74, 144, 226, 0.4);
