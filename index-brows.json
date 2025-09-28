@@ -34,5 +34,21 @@
         ]
       }
     ]
+  },
+  {
+    "title": "Peacemaker",
+    "banner": "https://i.ytimg.com/vi/qlKTNK7HKic/maxresdefault.jpg",
+    "description": "Click Popuot To Get Video info",
+    "seasons": [
+      {
+        "name": "S1",
+        "episodes": [
+          {
+            "title": "1",
+            "iframe": "https://drive.google.com/file/d/1dbCaKsUhBVj7IJqo-qKQWiPphbm6KYhh/preview"
+          }
+        ]
+      }
+    ]
   }
 ]
