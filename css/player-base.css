@@ -1,0 +1,373 @@
+/* ==========================================================================
+   PLAYER-BASE.CSS - Player page specific styles
+   ========================================================================== */
+
+@import 'common.css';
+
+/* ==========================================================================
+   PAGE LAYOUT
+   ========================================================================== */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
+
+.nav {
+  width: 95%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md) var(--space-lg);
+  margin: 20px auto 0;
+  background: var(--nav-bg);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  z-index: var(--z-nav);
+  transition: var(--transition-all);
+}
+
+.nav:hover {
+  box-shadow: 0 4px 12px rgba(212, 1, 1, 0.3);
+}
+
+.nav .home-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-weight: 500;
+  min-width: 80px;
+  transition: var(--transition-all);
+}
+
+.nav .home-link:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+  color: white;
+}
+
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--button-bg-secondary);
+  color: var(--button-color-secondary);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: var(--transition-all);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  background: var(--button-bg);
+  color: var(--button-color);
+}
+
+/* ==========================================================================
+   CONTROLS SIDEBAR
+   ========================================================================== */
+
+.controls-sidebar {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) translateX(-220px);
+  width: 260px;
+  padding: var(--space-lg);
+  background: var(--sidebar-bg);
+  backdrop-filter: blur(10px);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  box-shadow: var(--shadow-lg);
+  z-index: var(--z-sidebar);
+  transition: var(--transition-transform);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.controls-sidebar:hover {
+  transform: translateY(-50%) translateX(0);
+}
+
+.controls-toggle {
+  position: absolute;
+  top: 50%;
+  right: -45px;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: var(--button-bg-secondary);
+  color: var(--button-color-secondary);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-all);
+  box-shadow: var(--shadow-md);
+}
+
+.controls-sidebar:hover .controls-toggle {
+  opacity: 0.7;
+}
+
+.controls-toggle svg {
+  width: 20px;
+  height: 20px;
+  transition: var(--transition-transform);
+}
+
+/* Sidebar Content */
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  transition: var(--transition-all);
+  overflow: hidden;
+}
+
+/* Season Select */
+#seasonSelect {
+  width: 100%;
+  padding: var(--space-md);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  background: var(--input-bg);
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: var(--transition-all);
+}
+
+#seasonSelect:hover {
+  border-color: var(--accent-color);
+}
+
+/* Episode Buttons */
+#episodeButtons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: var(--space-xs);
+}
+
+#episodeButtons button {
+  padding: var(--space-md);
+  background: var(--button-bg-secondary);
+  color: var(--button-color-secondary);
+  border: none;
+  border-radius: var(--radius-sm);
+  text-align: left;
+  cursor: pointer;
+  transition: var(--transition-all);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+#episodeButtons button:hover {
+  opacity: 1;
+  transform: translateX(var(--space-xs));
+  background: var(--accent-color);
+  color: white;
+}
+
+#episodeButtons button:active,
+#episodeButtons button.active {
+  background: var(--primary-color);
+  color: white;
+  opacity: 1;
+}
+
+/* ==========================================================================
+   PLAYER CONTAINER
+   ========================================================================== */
+
+.player-container {
+  width: 95%;
+  max-width: 1000px;
+  margin: var(--space-xl) auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+#videoPlayer {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 560px;
+  border: none;
+  border-radius: var(--radius-lg);
+  background: #000;
+  box-shadow: var(--shadow-lg);
+}
+
+#desc {
+  width: 100%;
+  padding: var(--space-lg);
+  background: var(--card-bg);
+  color: var(--text-color);
+  border-radius: var(--radius-md);
+  line-height: 1.6;
+  text-align: center;
+  white-space: pre-wrap;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN - MOBILE
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  
+  /* Navigation */
+  .nav {
+    width: 95%;
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    margin-top: var(--space-md);
+    text-align: center;
+  }
+
+  .nav .theme-control {
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+  }
+
+  /* Sidebar Mobile Layout */
+  .controls-sidebar {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    top: auto;
+    width: 90%;
+    max-width: 400px;
+    transform: translateX(-50%) translateY(0);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    padding: var(--space-md);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .controls-sidebar:hover {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  /* Mobile Toggle Button */
+  .controls-toggle {
+    display: flex;
+    position: absolute;
+    top: var(--space-md);
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    background: var(--button-bg-secondary);
+    opacity: 1;
+  }
+
+  .controls-sidebar:hover .controls-toggle {
+    display: flex;
+    opacity: 1;
+    transform: translateX(-50%);
+  }
+
+  /* Collapsed State */
+  .controls-sidebar.collapsed .sidebar-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .controls-sidebar.collapsed .controls-toggle svg {
+    transform: rotate(180deg);
+  }
+
+  /* Episode buttons mobile adjustments */
+  #episodeButtons {
+    max-height: 40vh;
+  }
+
+  #episodeButtons button {
+    padding: var(--space-sm) var(--space-md);
+    font-size: 0.85rem;
+  }
+
+  #seasonSelect {
+    padding: var(--space-sm) var(--space-md);
+    font-size: 0.9rem;
+  }
+
+  /* Player container mobile */
+  .player-container {
+    width: 95%;
+    margin-top: var(--space-lg);
+    gap: var(--space-md);
+  }
+
+  #desc {
+    padding: var(--space-md);
+    font-size: 0.9rem;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN - TABLET
+   ========================================================================== */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  
+  .controls-sidebar {
+    width: 240px;
+  }
+
+  .player-container {
+    max-width: 900px;
+  }
+
+  #videoPlayer {
+    max-height: 480px;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN - LARGE SCREENS
+   ========================================================================== */
+
+@media (min-width: 1200px) {
+  
+  .nav {
+    max-width: 1400px;
+  }
+
+  .player-container {
+    max-width: 1200px;
+  }
+
+  .controls-sidebar {
+    width: 280px;
+  }
+}

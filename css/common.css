@@ -1,0 +1,235 @@
+/* ==========================================================================
+   COMMON.CSS - Shared styles and variables
+   ========================================================================== */
+
+/* CSS Custom Properties (Variables) */
+:root {
+  /* Colors - Light Theme Defaults */
+  --primary-color: #ff0000;
+  --primary-hover: #cc0000;
+  --accent-color: #4a90e2;
+  --text-color: #333333;
+  --text-secondary: #666666;
+  --bg-color: #ffffff;
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --sidebar-bg: rgba(255, 255, 255, 0.95);
+  --card-bg: #f8f9fa;
+  --input-bg: #ffffff;
+  --button-bg: #ff0000;
+  --button-color: #ffffff;
+  --button-bg-secondary: #e9ecef;
+  --button-color-secondary: #333333;
+  --border-color: #dee2e6;
+  --scrollbar-thumb: #cbd3da;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-xxl: 48px;
+
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  /* Animations */
+  --transition-fast: 0.15s;
+  --transition-normal: 0.3s;
+  --transition-slow: 0.5s;
+  --transition-all: all var(--transition-normal) ease;
+  --transition-transform: transform var(--transition-normal) ease;
+  --transition-opacity: opacity var(--transition-normal) ease;
+
+  /* Z-index layers */
+  --z-nav: 100;
+  --z-sidebar: 90;
+  --z-overlay: 80;
+  --z-dropdown: 70;
+  --z-content: 1;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 4px var(--shadow-color);
+  --shadow-md: 0 4px 8px var(--shadow-color);
+  --shadow-lg: 0 8px 16px var(--shadow-color);
+  --shadow-xl: 0 12px 24px var(--shadow-color);
+}
+
+/* Dark Theme Variables */
+[data-theme="dark"] {
+  --text-color: #e9ecef;
+  --text-secondary: #adb5bd;
+  --bg-color: #121212;
+  --nav-bg: rgba(18, 18, 18, 0.95);
+  --sidebar-bg: rgba(18, 18, 18, 0.95);
+  --card-bg: #1e1e1e;
+  --input-bg: #2d2d2d;
+  --button-bg-secondary: #2d2d2d;
+  --button-color-secondary: #e9ecef;
+  --border-color: #404040;
+  --scrollbar-thumb: #555555;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================================================
+   RESET AND BASE STYLES
+   ========================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  transition: var(--transition-all);
+}
+
+/* ==========================================================================
+   UTILITY CLASSES
+   ========================================================================== */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.fade-in {
+  animation: fadeIn var(--transition-normal) ease;
+}
+
+.slide-in {
+  animation: slideIn var(--transition-normal) ease;
+}
+
+/* ==========================================================================
+   ANIMATIONS
+   ========================================================================== */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+/* ==========================================================================
+   FOCUS STYLES
+   ========================================================================== */
+
+:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   COMMON COMPONENT STYLES
+   ========================================================================== */
+
+/* Links */
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: var(--transition-all);
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+/* Buttons */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: var(--transition-all);
+  background: var(--button-bg);
+  color: var(--button-color);
+  border-radius: var(--radius-sm);
+  padding: var(--space-sm) var(--space-md);
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Form Elements */
+input,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--input-bg);
+  color: var(--text-color);
+  transition: var(--transition-all);
+}
+
+input:focus,
+select:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: var(--radius-sm);
+  transition: var(--transition-all);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}

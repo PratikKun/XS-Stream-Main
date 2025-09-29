@@ -1,0 +1,388 @@
+/* ==========================================================================
+   INDEX-BASE.CSS - Home page specific styles
+   ========================================================================== */
+
+@import 'common.css';
+
+/* ==========================================================================
+   PAGE LAYOUT
+   ========================================================================== */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: var(--space-md) var(--space-lg);
+  background: var(--nav-bg);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  z-index: var(--z-nav); */
+
+}
+
+.nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav .logo a {
+  display: flex;
+  align-items: center;
+  padding: var(--space-xs);
+  border-radius: var(--radius-sm);
+  transition: var(--transition-all);
+}
+
+.nav .logo a:hover {
+  background: var(--card-bg);
+  transform: scale(1.05);
+}
+
+.nav .logo img {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+}
+
+.nav .links {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav .links a {
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  transition: var(--transition-all);
+  white-space: nowrap;
+}
+
+.nav .links a:hover {
+  background: var(--card-bg);
+  color: var(--primary-color);
+  transform: translateY(-1px);
+}
+
+.nav .links a[aria-current="page"] {
+  background: var(--primary-color);
+  color: white;
+  text-decoration: line-through;
+  font-size: 1.1em;
+  font-weight: 900;
+}
+
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--button-bg-secondary);
+  color: var(--button-color-secondary);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: var(--transition-all);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  background: var(--button-bg);
+  color: var(--button-color);
+}
+
+/* ==========================================================================
+   MAIN CONTENT
+   ========================================================================== */
+
+.home-section {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-xl) var(--space-lg);
+}
+
+/* ==========================================================================
+   SEARCH BAR
+   ========================================================================== */
+
+.search-bar {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto var(--space-xl);
+  display: flex;
+  justify-content: center;
+}
+
+#searchInput {
+  width: 100%;
+  padding: var(--space-md) var(--space-lg);
+  border: 2px solid var(--border-color);
+  border-radius: 25px;
+  font-size: 1rem;
+  background: var(--input-bg);
+  color: var(--text-color);
+  transition: var(--transition-all);
+  outline: none;
+}
+
+#searchInput:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.2);
+  background: var(--input-bg);
+}
+
+#searchInput::placeholder {
+  color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   CARDS GRID
+   ========================================================================== */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-lg);
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--transition-all);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border-color);
+  transition: var(--transition-all);
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: var(--space-md);
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+  color: var(--text-color);
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-description {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: var(--space-sm) 0;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.watch-now-button {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--primary-color);
+  color: white;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  transition: var(--transition-all);
+  text-decoration: none;
+  margin-top: var(--space-sm);
+}
+
+.watch-now-button:hover {
+  background: var(--primary-hover);
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   LOADING AND EMPTY STATES
+   ========================================================================== */
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.no-results {
+  text-align: center;
+  padding: var(--space-xxl);
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN - MOBILE
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+  /* Navigation */
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-md);
+    gap: var(--space-sm);
+  }
+
+  .nav .links {
+    width: 100%;
+    justify-content: center;
+    order: 2;
+    margin-top: var(--space-md);
+    gap: var(--space-sm);
+  }
+
+  .nav .logo {
+    order: 1;
+  }
+
+  .nav .theme-control {
+    order: 3;
+    position: absolute;
+    right: var(--space-lg);
+    top: var(--space-lg);
+  }
+
+  /* Main content */
+  .home-section {
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  /* Search bar */
+  .search-bar {
+    max-width: 100%;
+    margin-bottom: var(--space-lg);
+  }
+
+  #searchInput {
+    padding: var(--space-sm) var(--space-md);
+    font-size: 16px;
+    /* Prevents zoom on iOS */
+  }
+
+  /* Cards grid */
+  .cards {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    padding: 0;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .card img {
+    height: 180px;
+  }
+
+  .card-content {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-description {
+    font-size: 0.85rem;
+    -webkit-line-clamp: 2;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN - TABLET
+   ========================================================================== */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .cards {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--space-md);
+  }
+
+  .nav .links {
+    gap: var(--space-sm);
+  }
+
+  .nav .links a {
+    padding: var(--space-xs) var(--space-sm);
+    font-size: 0.9rem;
+  }
+
+  .nav {
+    height: 20%;
+  }
+
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN - LARGE SCREENS
+   ========================================================================== */
+
+@media (min-width: 1200px) {
+
+  .cards {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    max-width: 1600px;
+  }
+
+  .home-section {
+    padding: var(--space-xxl) var(--space-xl);
+  }
+
+  .nav {
+    height: 20%;
+  }
+}
