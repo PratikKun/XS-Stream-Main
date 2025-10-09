@@ -82,8 +82,25 @@
         ]
       }
     ]
+  },
+  {
+    "title": "Pagalpanti (2019)",
+    "banner": "https://qqcdnpictest.mxplay.com/pic/15b1565e53160901e8e95a2c7fe7fc14/en/16x9/640x360/test_pic1736413471792.jpg",
+    "description": "Click Popuot To Get Video info",
+    "seasons": [
+      {
+        "name": "Movie",
+        "episodes": [
+          {
+            "title": "Movie",
+            "iframe": "https://drive.google.com/file/d/1r6binr7vPmCOrxrmyhUKDZbOCJKzI8kr/preview"
+          }
+        ]
+      }
+    ]
   }
 ]
+
 
 
 
