@@ -46,5 +46,22 @@
         ]
       }
     ]
+  },
+  {
+    "title": "Great Grand Masti",
+    "banner": "https://m.media-amazon.com/images/S/pv-target-images/a557ea038db4f9766c3a1da342f7eec3fb4d8edd643309f51d19817b0edbde5d.jpg",
+    "description": "Click Popuot To Get Video info",
+    "seasons": [
+      {
+        "name": "Movie",
+        "episodes": [
+          {
+            "title": "Movie",
+            "iframe": "https://www.youtube.com/embed/becTJp0gP5E"
+          }
+        ]
+      }
+    ]
   }
+
 ]
